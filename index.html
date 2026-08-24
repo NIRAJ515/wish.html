@@ -3,121 +3,306 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riya's Birthday Surprise 💖</title>
+
+<title>Rivi's Birthday Surprise 💖</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+
 body{
-  min-height:100vh;overflow:hidden;font-family:Arial,sans-serif;
-  background:#070014;color:white;display:flex;align-items:center;
+  min-height:100vh;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  background:#070014;
+  color:white;
+  display:flex;
+  align-items:center;
   justify-content:center;
 }
+
 body:before{
-  content:"";position:fixed;inset:0;
+  content:"";
+  position:fixed;
+  inset:0;
   background:
     radial-gradient(circle at 20% 20%,#ff3d9a33,transparent 30%),
     radial-gradient(circle at 80% 80%,#7c3cff33,transparent 30%);
   pointer-events:none;
 }
-.stars{position:fixed;inset:0}
-.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;animation:blink 2s infinite alternate}
-@keyframes blink{to{opacity:.15;transform:scale(.5)}}
+
+.stars{
+  position:fixed;
+  inset:0
+}
+
+.star{
+  position:absolute;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  animation:blink 2s infinite alternate
+}
+
+@keyframes blink{
+  to{
+    opacity:.15;
+    transform:scale(.5)
+  }
+}
 
 .screen{
-  width:min(92%,650px);text-align:center;position:relative;z-index:2;
+  width:min(92%,650px);
+  text-align:center;
+  position:relative;
+  z-index:2;
   padding:30px 22px;
 }
-.hidden{display:none!important}
 
-.badge{font-size:13px;letter-spacing:5px;color:#ffb8e0}
-h1{
-    font-size:clamp(45px,11vw,82px);
-    margin:15px 0;
-
-    background:linear-gradient(
-        90deg,
-        #fff,
-        #ff79c8,
-        #c78cff,
-        #fff
-    );
-
-    background-size:250%;
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    color:transparent;
-
-    animation:shine 3s linear infinite;
+.hidden{
+  display:none!important
 }
-@keyframes shine{to{background-position:250%}}
 
-.subtitle{font-size:18px;color:#ddd;line-height:1.6}
+.badge{
+  font-size:13px;
+  letter-spacing:5px;
+  color:#ffb8e0
+}
+
+h1{
+  font-size:clamp(45px,11vw,82px);
+  margin:15px 0;
+
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #ff79c8,
+    #c78cff,
+    #fff
+  );
+
+  background-size:250%;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+  to{
+    background-position:250%
+  }
+}
+
+.subtitle{
+  font-size:18px;
+  color:#ddd;
+  line-height:1.6
+}
 
 .heartBtn{
-  width:145px;height:145px;border-radius:50%;border:0;margin:40px auto 20px;
-  display:block;cursor:pointer;background:#ff3f9f;
-  box-shadow:0 0 30px #ff3f9f,0 0 80px #ff3f9f66;
-  font-size:70px;transition:.2s;animation:pulse 1.5s infinite;
+  width:145px;
+  height:145px;
+  border-radius:50%;
+  border:0;
+  margin:40px auto 20px;
+  display:block;
+  cursor:pointer;
+  background:#ff3f9f;
+  box-shadow:
+    0 0 30px #ff3f9f,
+    0 0 80px #ff3f9f66;
+  font-size:70px;
+  transition:.2s;
+  animation:pulse 1.5s infinite;
 }
-.heartBtn:hover{transform:scale(1.08)}
-@keyframes pulse{50%{box-shadow:0 0 45px #ff3f9f,0 0 100px #ff3f9f88}}
 
-.counter{color:#ffb9e0;font-size:14px}
+.heartBtn:hover{
+  transform:scale(1.08)
+}
+
+@keyframes pulse{
+  50%{
+    box-shadow:
+      0 0 45px #ff3f9f,
+      0 0 100px #ff3f9f88
+  }
+}
+
+.counter{
+  color:#ffb9e0;
+  font-size:14px
+}
 
 .card{
-  background:#ffffff12;border:1px solid #ffffff25;border-radius:28px;
-  padding:35px 25px;backdrop-filter:blur(14px);
+  background:#ffffff12;
+  border:1px solid #ffffff25;
+  border-radius:28px;
+  padding:35px 25px;
+  backdrop-filter:blur(14px);
   box-shadow:0 20px 70px #0008;
 }
-.lock{font-size:65px}
+
+.lock{
+  font-size:65px
+}
+
 input{
-  width:80%;max-width:300px;padding:14px 18px;border-radius:30px;
-  border:1px solid #ffffff33;background:#ffffff12;color:white;
-  outline:none;text-align:center;font-size:16px;margin:20px 0;
+  width:80%;
+  max-width:300px;
+  padding:14px 18px;
+  border-radius:30px;
+  border:1px solid #ffffff33;
+  background:#ffffff12;
+  color:white;
+  outline:none;
+  text-align:center;
+  font-size:16px;
+  margin:20px 0;
 }
+
 button.action{
-  border:0;border-radius:30px;padding:14px 25px;cursor:pointer;
-  background:linear-gradient(45deg,#ff3f9f,#914cff);color:white;
-  font-weight:bold;font-size:16px;box-shadow:0 10px 30px #ff3f9f44;
+  border:0;
+  border-radius:30px;
+  padding:14px 25px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#ff3f9f,#914cff);
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  box-shadow:0 10px 30px #ff3f9f44;
 }
-#error{color:#ff7fbf;margin-top:10px}
+
+#error{
+  color:#ff7fbf;
+  margin-top:10px
+}
 
 .gift{
-  font-size:125px;cursor:pointer;display:inline-block;
+  font-size:125px;
+  cursor:pointer;
+  display:inline-block;
   animation:giftFloat 1.7s ease-in-out infinite;
 }
-@keyframes giftFloat{50%{transform:translateY(-15px) rotate(3deg)}}
-.tap{color:#ddd;margin-top:15px}
 
-.cake{font-size:105px;margin:20px 0;animation:cakeIn .8s ease}
-@keyframes cakeIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes giftFloat{
+  50%{
+    transform:translateY(-15px) rotate(3deg)
+  }
+}
+
+.tap{
+  color:#ddd;
+  margin-top:15px
+}
+
+.cake{
+  font-size:105px;
+  margin:20px 0;
+  animation:cakeIn .8s ease
+}
+
+@keyframes cakeIn{
+  from{
+    transform:scale(0);
+    opacity:0
+  }
+  to{
+    transform:scale(1);
+    opacity:1
+  }
+}
 
 .message{
-  min-height:125px;font-size:20px;line-height:1.7;color:#ffe4f5;
-  margin:20px auto;max-width:560px;
+  min-height:125px;
+  font-size:20px;
+  line-height:1.7;
+  color:#ffe4f5;
+  margin:20px auto;
+  max-width:560px;
 }
-.cursor{animation:blinkCursor .7s infinite}
-@keyframes blinkCursor{50%{opacity:0}}
 
-.finalTitle{font-size:45px;color:#ff9bd5}
-.finalEmoji{font-size:80px;margin:15px}
-.smallNote{color:#aaa;font-size:13px;margin-top:18px}
+.cursor{
+  animation:blinkCursor .7s infinite
+}
+
+@keyframes blinkCursor{
+  50%{
+    opacity:0
+  }
+}
+
+.finalTitle{
+  font-size:45px;
+  color:#ff9bd5
+}
+
+.finalEmoji{
+  font-size:80px;
+  margin:15px
+}
+
+.smallNote{
+  color:#aaa;
+  font-size:13px;
+  margin-top:18px
+}
 
 .confetti{
-  position:fixed;top:-30px;z-index:20;font-size:22px;
-  animation:fall linear forwards;pointer-events:none
+  position:fixed;
+  top:-30px;
+  z-index:20;
+  font-size:22px;
+  animation:fall linear forwards;
+  pointer-events:none
 }
-@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 
-.photoBox{
-  width:min(90vw,360px);height:220px;margin:20px auto;border-radius:22px;
-  border:1px solid #ffffff30;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#ff4fa733,#9c4dff33);
-  overflow:hidden;color:#ddd;
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg)
+  }
 }
-.photoBox img{width:100%;height:100%;object-fit:cover}
+
+
+/* SPECIAL BOX */
+
+.specialBox{
+  margin:20px auto;
+  padding:25px;
+  max-width:400px;
+  border-radius:25px;
+  background:#ffffff12;
+  border:1px solid #ffffff25;
+  backdrop-filter:blur(12px);
+  box-shadow:0 15px 50px #0006;
+}
+
+.specialEmoji{
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.specialBox h2{
+  color:#ffb8e0;
+  margin-bottom:15px;
+}
+
+.specialBox p{
+  color:#ffe4f5;
+  font-size:18px;
+  min-height:55px;
+  line-height:1.5;
+  margin-bottom:15px;
+}
+
 </style>
 </head>
 
@@ -125,179 +310,535 @@ button.action{
 
 <div class="stars" id="stars"></div>
 
+
 <!-- 1. OPENING -->
+
 <section class="screen" id="s1">
-  <div class="badge">A LITTLE SURPRISE FOR</div>
-  <h1>Riya 💖</h1>
-  <p class="subtitle">Someone has prepared a secret birthday surprise for you... 👀</p>
-  <button class="heartBtn" onclick="heartClick()">❤️</button>
-  <div class="counter" id="counter">Tap the heart 3 times...</div>
+
+  <div class="badge">
+    A LITTLE SURPRISE FOR
+  </div>
+
+  <h1>
+    Rivi 💖
+  </h1>
+
+  <p class="subtitle">
+    Someone has prepared a secret birthday surprise for you... 👀
+  </p>
+
+  <button class="heartBtn" onclick="heartClick()">
+    ❤️
+  </button>
+
+  <div class="counter" id="counter">
+    Tap the heart 3 times...
+  </div>
+
 </section>
+
 
 <!-- 2. SECRET -->
+
 <section class="screen hidden" id="s2">
+
   <div class="card">
-    <div class="lock">🔐</div>
-    <h2>Secret Unlocked</h2>
-    <p class="subtitle">Only Riya can open this surprise 😏</p>
-    <input id="password" placeholder="Enter the secret word">
+
+    <div class="lock">
+      🔐
+    </div>
+
+    <h2>
+      Secret Unlocked
+    </h2>
+
+    <p class="subtitle">
+      Only Rivi can open this surprise 😏
+    </p>
+
+    <input
+      id="password"
+      placeholder="Enter the secret word"
+    >
+
     <br>
-    <button class="action" onclick="unlock()">Unlock 💗</button>
+
+    <button class="action" onclick="unlock()">
+      Unlock 💗
+    </button>
+
     <div id="error"></div>
+
   </div>
+
 </section>
+
 
 <!-- 3. GIFT -->
+
 <section class="screen hidden" id="s3">
-  <div class="badge">ONE LAST THING...</div>
-  <h2 style="font-size:38px;margin:15px">A Gift For You 🎁</h2>
-  <div class="gift" onclick="openGift()">🎁</div>
-  <p class="tap">Tap the gift to open it</p>
+
+  <div class="badge">
+    ONE LAST THING...
+  </div>
+
+  <h2 style="font-size:38px;margin:15px">
+    A Gift For You 🎁
+  </h2>
+
+  <div class="gift" onclick="openGift()">
+    🎁
+  </div>
+
+  <p class="tap">
+    Tap the gift to open it
+  </p>
+
 </section>
+
 
 <!-- 4. CAKE -->
+
 <section class="screen hidden" id="s4">
-  <div class="badge">TODAY IS YOUR DAY</div>
-  <div class="cake">🎂</div>
-  <h1>Happy Birthday!</h1>
-  <h2 style="color:#ffd0eb">Riya ❤️</h2>
-  <p class="subtitle">Make a wish and get ready... ✨</p>
-  <button class="action" onclick="showMessage()">Make My Wish ✨</button>
+
+  <div class="badge">
+    TODAY IS YOUR DAY
+  </div>
+
+  <div class="cake">
+    🎂
+  </div>
+
+  <h1>
+    Happy Birthday!
+  </h1>
+
+  <h2 style="color:#ffd0eb">
+    Rivi ❤️
+  </h2>
+
+  <p class="subtitle">
+    Make a wish and get ready... ✨
+  </p>
+
+  <button class="action" onclick="showMessage()">
+    Make My Wish ✨
+  </button>
+
 </section>
+
 
 <!-- 5. MESSAGE -->
+
 <section class="screen hidden" id="s5">
+
   <div class="card">
-    <div class="badge">A MESSAGE FOR RIYA</div>
+
+    <div class="badge">
+      A MESSAGE FOR RIVI
+    </div>
+
     <div class="message" id="typed"></div>
-    <button class="action hidden" id="finalBtn" onclick="finalPage()">Continue 💖</button>
+
+    <button
+      class="action hidden"
+      id="finalBtn"
+      onclick="finalPage()"
+    >
+      Continue 💖
+    </button>
+
   </div>
+
 </section>
 
+
 <!-- 6. FINAL -->
+
 <section class="screen hidden" id="s6">
-  <div class="finalEmoji">🥳🎉</div>
-  <div class="finalTitle">Happy Birthday Riya!</div>
-  <div class="photoBox">
-    <div>📸<br><br>Add Riya's photo here later</div>
+
+  <div class="finalEmoji">
+    🥳🎉
   </div>
+
+  <div class="finalTitle">
+    Happy Birthday Rivi!
+  </div>
+
+
+  <!-- NEW SPECIAL SECTION -->
+
+  <div class="specialBox">
+
+    <div class="specialEmoji">
+      💖
+    </div>
+
+    <h2>
+      Why You're Special ✨
+    </h2>
+
+    <p id="reason">
+      Click the button to find out 💕
+    </p>
+
+    <button class="action" onclick="showReason()">
+      Tell Me 💗
+    </button>
+
+  </div>
+
+
   <p class="subtitle">
-    May your smile stay bright, your dreams become real,
-    and your life be filled with unforgettable moments. 💕
+
+    May your smile stay bright,
+    your dreams become real,
+    and your life be filled with
+    unforgettable moments. 💕
+
   </p>
-  <button class="action" onclick="celebrate()">🎉 Celebrate!</button>
-  <div class="smallNote">Made with ❤️ especially for Riya</div>
+
+  <button class="action" onclick="celebrate()">
+    🎉 Celebrate!
+  </button>
+
+  <div class="smallNote">
+    Made with ❤️ especially for Rivi
+  </div>
+
 </section>
+
+
 
 <script>
 
+
 /* STARS */
+
 for(let i=0;i<100;i++){
+
   const s=document.createElement("div");
+
   s.className="star";
+
   s.style.left=Math.random()*100+"vw";
+
   s.style.top=Math.random()*100+"vh";
+
   s.style.animationDelay=Math.random()*3+"s";
-  document.getElementById("stars").appendChild(s);
+
+  document
+    .getElementById("stars")
+    .appendChild(s);
+
 }
+
+
 
 /* SCREEN CONTROL */
+
 function show(id){
-  document.querySelectorAll(".screen").forEach(x=>x.classList.add("hidden"));
-  document.getElementById(id).classList.remove("hidden");
+
+  document
+    .querySelectorAll(".screen")
+    .forEach(x=>x.classList.add("hidden"));
+
+  document
+    .getElementById(id)
+    .classList.remove("hidden");
+
 }
 
+
+
 /* HEART GAME */
+
 let taps=0;
 
 function heartClick(){
+
   taps++;
+
   document.getElementById("counter").textContent =
-    taps<3 ? `Nice! ${3-taps} more tap${3-taps>1?"s":""}... 💕` : "Opening your surprise... ✨";
+
+    taps<3
+
+    ? `Nice! ${3-taps} more tap${3-taps>1?"s":""}... 💕`
+
+    : "Opening your surprise... ✨";
+
 
   if(taps>=3){
-    setTimeout(()=>show("s2"),600);
+
+    setTimeout(
+      ()=>show("s2"),
+      600
+    );
+
   }
+
 }
 
-/* SECRET WORD
-   Secret word = RIYA
-*/
+
+
+/* SECRET WORD */
+
 function unlock(){
-  const value=document.getElementById("password").value.trim().toLowerCase();
 
-  if(value==="riya"){
-    document.getElementById("error").textContent="";
+  const value =
+    document
+      .getElementById("password")
+      .value
+      .trim()
+      .toLowerCase();
+
+
+  if(value==="rivi"){
+
+    document
+      .getElementById("error")
+      .textContent="";
+
     show("s3");
-  }else{
-    document.getElementById("error").textContent="Hmm... try: RIYA 😉";
+
   }
+
+  else{
+
+    document
+      .getElementById("error")
+      .textContent=
+      "Hmm... try: RIVI 😉";
+
+  }
+
 }
+
+
 
 /* GIFT */
+
 function openGift(){
+
   burst();
-  setTimeout(()=>show("s4"),700);
+
+  setTimeout(
+    ()=>show("s4"),
+    700
+  );
+
 }
+
+
 
 /* TYPING MESSAGE */
+
 function showMessage(){
+
   show("s5");
 
-  const text =
-  "Dear Riya, ❤️\n\n" +
-  "Today is your special day, and you deserve every beautiful thing life has to offer. " +
-  "Keep smiling, keep dreaming, and keep being the amazing person you are. ✨\n\n" +
-  "May this new year of your life bring you happiness, success, unforgettable memories, " +
-  "and lots of reasons to smile. 💕\n\n" +
-  "Happy Birthday, Riya! 🎂🎉";
 
-  const box=document.getElementById("typed");
+  const text =
+
+  "Dear Rivi, ❤️\n\n" +
+
+  "Today is your special day, and you deserve every beautiful thing life has to offer. " +
+
+  "Keep smiling, keep dreaming, and keep being the amazing person you are. ✨\n\n" +
+
+  "May this new year of your life bring you happiness, success, unforgettable memories, " +
+
+  "and lots of reasons to smile. 💕\n\n" +
+
+  "Happy Birthday, Rivi! 🎂🎉";
+
+
+  const box =
+    document.getElementById("typed");
+
   box.innerHTML="";
+
   let i=0;
 
+
   function type(){
+
     if(i<text.length){
+
       box.innerHTML =
-        text.substring(0,i+1).replace(/\n/g,"<br>") +
+
+        text
+          .substring(0,i+1)
+          .replace(/\n/g,"<br>")
+
+        +
+
         '<span class="cursor">|</span>';
+
       i++;
-      setTimeout(type,35);
-    }else{
-      document.getElementById("finalBtn").classList.remove("hidden");
+
+      setTimeout(
+        type,
+        35
+      );
+
     }
+
+    else{
+
+      document
+        .getElementById("finalBtn")
+        .classList
+        .remove("hidden");
+
+    }
+
   }
+
   type();
+
 }
+
+
 
 /* FINAL */
+
 function finalPage(){
+
   show("s6");
+
   burst();
+
 }
+
+
+
+/* WHY YOU ARE SPECIAL */
+
+const reasons = [
+
+  "Your smile can make any day better. 😊💕",
+
+  "You have a beautiful heart. ❤️",
+
+  "You make ordinary moments feel special. ✨",
+
+  "You deserve all the happiness in the world. 🌸",
+
+  "You are simply one of a kind. 💖",
+
+  "You bring happiness wherever you go. 🥰",
+
+  "You are stronger and more amazing than you realize. 🌟"
+
+];
+
+
+let reasonIndex=0;
+
+
+function showReason(){
+
+  document
+    .getElementById("reason")
+    .textContent =
+    reasons[reasonIndex];
+
+  reasonIndex++;
+
+  if(reasonIndex>=reasons.length){
+
+    reasonIndex=0;
+
+  }
+
+  burst();
+
+}
+
+
 
 /* CONFETTI */
+
 function burst(){
-  const items=["🎉","✨","💖","💕","🎊","⭐","🥳","❤️","🌸"];
+
+  const items=[
+
+    "🎉",
+    "✨",
+    "💖",
+    "💕",
+    "🎊",
+    "⭐",
+    "🥳",
+    "❤️",
+    "🌸"
+
+  ];
+
 
   for(let i=0;i<90;i++){
-    const c=document.createElement("div");
+
+    const c=
+      document.createElement("div");
+
     c.className="confetti";
-    c.textContent=items[Math.floor(Math.random()*items.length)];
-    c.style.left=Math.random()*100+"vw";
-    c.style.animationDuration=(2+Math.random()*3)+"s";
-    c.style.fontSize=(15+Math.random()*18)+"px";
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),5500);
+
+    c.textContent=
+      items[
+        Math.floor(
+          Math.random()*items.length
+        )
+      ];
+
+
+    c.style.left=
+      Math.random()*100+"vw";
+
+
+    c.style.animationDuration=
+      (2+Math.random()*3)+"s";
+
+
+    c.style.fontSize=
+      (15+Math.random()*18)+"px";
+
+
+    document
+      .body
+      .appendChild(c);
+
+
+    setTimeout(
+      ()=>c.remove(),
+      5500
+    );
+
   }
+
 }
 
+
+
+/* CELEBRATE */
+
 function celebrate(){
+
   burst();
-  setTimeout(burst,900);
-  setTimeout(burst,1800);
+
+  setTimeout(
+    burst,
+    900
+  );
+
+  setTimeout(
+    burst,
+    1800
+  );
+
 }
 
 </script>
+
 </body>
-</html>S
+</html>
